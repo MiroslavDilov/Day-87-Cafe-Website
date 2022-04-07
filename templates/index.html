@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Cáfe List</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='styles/css/main.css')}}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+					<h1>Welcome to Cáfe List</h1>
+				</header>
+				<footer>
+					<a href="#first" class="button scrolly">Click to see the list of the cáfes</a>
+				</footer>
+			</section>
+
+		<!-- First -->
+			<section id="first" class="main">
+				<header>
+					<div class="container">
+						<h2>Tessellate is a free responsive site template</h2>
+						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
+						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+					</div>
+				</header>
+				
+
+		<!-- Second -->
+
+
+		<!-- Third -->
+
+
+		 <!-- Basic Elements -->
+			<section class="main">
+				<header>
+					<div class="container">
+						<h2>A Whole Lotta Elements</h2>
+						<p>General purpose elements for every general purpose. Or something like that.</p>
+					</div>
+				</header>
+				<div class="content style1 dark">
+					<div class="container">
+
+
+						<section>
+							<header>
+								<h3>Table</h3>
+							</header>
+							<div class="table-wrapper">
+								<table class="default">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Name</th>
+											<th>Map URL</th>
+											<th>IMG</th>
+											<th>Location</th>
+											<th>Sockets</th>
+											<th>Toilet</th>
+											<th>Wi-FI</th>
+											<th>Taking Calls</th>
+											<th>Seats</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for row in coffees %}
+											<tr>
+												<td>{{row[0]}}</td>
+												<td>{{row[1]}}</td>
+												<td><a href="{{row[2]}}">Google Maps</a></td>
+												<td>
+													<img src="{{row[3]}}" alt="" class="table-img">
+												</td>
+												<td>{{row[4]}}</td>
+												<td>{{row[5]}}</td>
+												<td>{{row[6]}}</td>
+												<td>{{row[7]}}</td>
+												<td>{{row[8]}}</td>
+												<td>{{row[9]}}</td>
+												<td>{{row[10]}}</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="1"></td>
+<!--											<td>100.00</td>-->
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+
+		<!-- Fourth -->
+
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<div class="copyright">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="url_for('static', filename='js/jquery.min.js')"></script>
+			<script src="url_for('static', filename='js/jquery.scrolly.min.js')"></script>
+			<script src="url_for('static', filename='js/browser.min.js')"></script>
+			<script src="url_for('static', filename='js/breakpoints.min.js')"></script>
+			<script src="url_for('static', filename='js/util.js')"></script>
+			<script src="url_for('static', filename='js/main.js')"></script>
+
+	</body>
+</html>
